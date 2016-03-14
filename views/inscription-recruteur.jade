@@ -2,7 +2,7 @@ extends layout
 block content
 
   //- BEGIN FORMULAIRE 
-  form(action='/espaceRecruteur', method="post", id="form_2")
+  form(action='/espaceRecruteur', method="post", id="form-2")
 
     //- FULL PAGE - 2 PARTIES - INFO PERSO - TEST COMPETENCE
     .col-md-12.full-page-inscription-recruteur
@@ -192,7 +192,7 @@ block content
 
             //- BUTTON SUIVANT 
             .col-md-6.zone-button
-              a.all-button(href="#") Suivant
+              input(type="submit", value="Suivant", form="form-2")
 
 
 
