@@ -114,16 +114,16 @@ body
  ###########################################################
 
 /* FULL PAGE - 2 PARTIES - INFO - TEST */ 
-.full-page-inscription 
+.full-page-inscription-demandeur
   height: 640px
   overflow: hidden
+  padding: 0
 
-/*-------------- FORMULAIRE D'INSCRIPTION --------------*/ 
+/*-------------- FORMULAIRE D'INSCRIPTION DEMANDEUR --------------*/ 
 
 /* BLOCK INFORMATIONS PERSONNELLES */ 
 .block-info-perso 
   padding: 0
-  display: visible
 
 /* TITLE FORMULAIRE */ 
 .title-formulaire 
@@ -199,14 +199,16 @@ body
     text-decoration: none
     margin-left: 10%
 
-/* #########################################################
- ###########################################################
 
-/* BLOCK TEST COMPTENCES */ 
+/* ---------- TEST COMPTENCES --------- */ 
 .block-test-competences
   padding: 0
 
+/* ... */ 
+
+
 /* ANIMATION CLICK - DEFILEMENT BLOCK */ 
+
 /* SUIVANT */ 
 .block-info-click
   top: -660px
@@ -218,12 +220,80 @@ body
 
 /* RETOUR */ 
 .block-info-retour
-  bottom: 660px
+  top: 0
   transition: 2s
 
 .block-test-retour
-  bottom: 660px
+  top: 660px
   transition: 2s
+
+/* #########################################################
+ ###########################################################
+
+/*-------------- FORMULAIRE D'INSCRIPTION RECRUTEUR --------------*/ 
+
+/* FULL PAGE INSCRIPTION RECRUTEUR */ 
+.full-page-inscription-recruteur
+  height: 880px
+  overflow: hidden
+  padding: 0
+
+/* BLOCK INFO RECRUTEUR */
+.block-inscription-recruteur
+  padding: 0
+
+/* ITEMS GUIDAGE RECRUTEUR */ 
+#item-guidage-recruteur
+  margin-top: 11%
+
+/* BLOCK INFORMATION ENTREPRISE - RECRUTEUR */ 
+.espace-formulaire-recruteur 
+  background-color: $background-formulaire
+  +box-shadow(2px, 2px, 4px, #656565)
+  +border-radius(10px)
+  padding: 20px
+  height: 620px
+  margin-bottom: 55px
+  overflow: visible
+
+/* TITLE INFORMATIONS */ 
+.title-informations
+  text-align: center
+  margin-bottom: 10px
+
+/* CONTENT INFO ENTREPRISE */ 
+.content-form
+  ul
+    li
+      select
+        height: 35px
+        border: 1px solid $border-champs
+        border-radius: 5px
+
+/* CONTENT INFO RECRUTEUR */
+
+/* ... */ 
+
+/* ANIMATION CLICK - DEFILEMENT BLOCK */ 
+
+/* SUIVANT */ 
+.block-info-recruteur-suivant
+  top: -860px
+  transition: 2s
+
+.block-test-recruteur-suivant
+  top: -900px
+  transition: 2s
+
+/* RETOUR */ 
+.block-info-recruteur-retour
+  top: 0
+  transition: 2s
+
+.block-test-recruteur-retour
+  top: 860px
+  transition: 2s
+
 
 
 

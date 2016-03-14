@@ -1,22 +1,4 @@
-/* BOUTTON RECRUTEUR
-
-$('#start-recruteur').click(function() {
-    $(this).toggleClass("invisible");
-    $(".eventClick-recruteur").toggleClass("visible");
-});
-
- BOUTTON DEMANDEUR
-
-$('#start-demandeur').click(function() {
-    $(this).toggleClass("invisible");
-    $(".eventClick-demandeur").toggleClass("visible");
-});
-
-*/
-
-/* SCROLL BOUTON SUITE */
-
-/* ANIMATION NAVBAR SCROLLING*/
+/* ANIMATION SCROLLING - BUTTON COMMENCER */
 $(function() {
     $('a[href*=#]:not([href=#])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -35,22 +17,37 @@ $(function() {
 /* #########################################
 ######################################### */
 
-/* PAGE INSCRIPTION - DEFILEMENT DES BLOCKS - ETAPES INSCRIPTION */ 
+/* PAGE INSCRIPTION DEMANDEUR - DEFILEMENT DES BLOCKS - ETAPES INSCRIPTION */ 
 
 /* CLICK BUTTON SUIVANT */ 
 
-$('#click-suivant-info').click(function() {
+$('#click-suivant-demandeur').click(function() {
     $(".block-info-perso").toggleClass("block-info-click");
     $(".block-test-competences").toggleClass("block-test-click");
 });
 
 /* CLICK BUTTON RETOUR */ 
 
-$('#click-retour-test').click(function() {
-    $(".block-info-perso").toggleClass("block-info-retour");
+$('#click-retour-demandeur').click(function() {
     $(".block-test-competences").toggleClass("block-test-retour");
+    $(".block-info-perso").toggleClass("block-info-retour");
 });
 
+/* PAGE INSCRIPTION RECRUTEUR - DEFILEMENT DES BLOCKS - ETAPES INSCRIPTION */ 
+
+/* CLICK BUTTON SUIVANT */ 
+
+$('#click-suivant-recruteur').click(function() {
+    $(".block-inscription-recruteur").toggleClass("block-info-recruteur-suivant");
+    $(".block-test-inscription-recruteur").toggleClass("block-test-recruteur-suivant");
+});
+
+/* CLICK BUTTON RETOUR */ 
+
+$('#click-retour-recruteur').click(function() {
+    $(".block-test-inscription-recruteur").toggleClass("block-test-recruteur-retour");
+    $(".block-inscription-recruteur").toggleClass("block-info-recruteur-retour");
+});
 
 
 
