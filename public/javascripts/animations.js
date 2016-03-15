@@ -14,40 +14,46 @@ $(function() {
     });
 });
 
-/* #########################################
-######################################### */
+/* ################################################################# */
 
-/* PAGE INSCRIPTION DEMANDEUR - DEFILEMENT DES BLOCKS - ETAPES INSCRIPTION */ 
+/* RESTRICTION ETAPE PAR ETAPE - REMPLISSAGE DES CHAMPS OBLIGATOIRE */ 
 
-/* CLICK BUTTON SUIVANT */ 
+/* ... */ 
+
+/* ################################################################# */ 
+
+/* PAGE INSCRIPTION - DEFILEMENT DES ETAPES */ 
+
+/* INSCRIPTION DEMANDEUR */ 
+
+/* ETAPE INFORMATION PERSONNELLES - CLICK DEFILEMENT ETAPE 2 */ 
 
 $('#click-suivant-demandeur').click(function() {
-    $(".block-info-perso").toggleClass("block-info-click");
-    $(".block-test-competences").toggleClass("block-test-click");
+    $(".content-formulaire").toggleClass("demandeur-suivant");
 });
 
-/* CLICK BUTTON RETOUR */ 
+/* ETAPE TEST COMPETENCES - CLICK DEFILEMENT RETOUR ETAPE 1 */ 
 
 $('#click-retour-demandeur').click(function() {
-    $(".block-test-competences").toggleClass("block-test-retour");
-    $(".block-info-perso").toggleClass("block-info-retour");
+    $(".content-formulaire").toggleClass("retour");
 });
 
-/* PAGE INSCRIPTION RECRUTEUR - DEFILEMENT DES BLOCKS - ETAPES INSCRIPTION */ 
+/* INSCRIPTION RECRUTEUR */ 
 
-/* CLICK BUTTON SUIVANT */ 
+/* ETAPE INFORMATION PERSONNELLES - CLICK DEFILEMENT ETAPE 2 */ 
 
 $('#click-suivant-recruteur').click(function() {
-    $(".block-inscription-recruteur").toggleClass("block-info-recruteur-suivant");
-    $(".block-test-inscription-recruteur").toggleClass("block-test-recruteur-suivant");
+    $(".content-formulaire").toggleClass("recruteur-suivant");
 });
 
-/* CLICK BUTTON RETOUR */ 
+/* ETAPE TEST COMPETENCES - CLICK DEFILEMENT RETOUR ETAPE 1 */ 
 
 $('#click-retour-recruteur').click(function() {
-    $(".block-test-inscription-recruteur").toggleClass("block-test-recruteur-retour");
-    $(".block-inscription-recruteur").toggleClass("block-info-recruteur-retour");
+    $(".content-formulaire").toggleClass("retour");
 });
+
+
+
 
 
 

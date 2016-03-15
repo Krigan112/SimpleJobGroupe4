@@ -1,15 +1,16 @@
 extends layout 
-block content
+block content 
 
   //- BEGIN FORMULAIRE 
   form(action='/espaceDemandeur', method="post", id="form-1")
 
-    //- FULL PAGE - 2 PARTIES - INFO PERSO - TEST COMPETENCE
-    .col-md-12.full-page-inscription-demandeur
+    //- CONTENT PAGE - VISIBLE 
+    .col-md-12.content-inscription#content-inscription-demandeur
 
-      //- BLOCK INFORMATIONS PERSONNELLES
-      .col-md-12.block-info-perso
+      //- CONTENT FORMULAIRE 
+      .col-md-12.content-formulaire 
 
+        //- ETAPE 1 - INFORMATIONS PERSONNELLES 
         //- TITLE FORMULAIRE
         .col-md-offset-2.col-md-8.title-formulaire
           h3 Informations Personnelles
@@ -19,13 +20,13 @@ block content
         .col-md-12.content-full
 
           //- ITEMS GUIDAGE USER
-          .col-md-1.items-guidage-user
+          .col-md-1#item-guidage-demandeur.items-guidage-user
             p#item-active 1
             p 2 
             P 3
 
           //- BEGIN CONTENT FORMULAIRE 
-          .col-md-11.espace-formulaire
+          .col-md-11.espace-formulaire#form-demandeur
 
             //- CONTENT FORMULAIRE LEFT
             .col-md-6.content-form
@@ -58,6 +59,11 @@ block content
                   label(for='email') E-mail :
                   input(name='email', type='email' placeholder='E-mail')
                 li
+                  label(for='mot_de_passe2') Permis de conduire :
+                  select(name='permis_de_conduire')
+                    option(value='Oui') Oui
+                    option(value='Non') Non
+                li
                   label(for='mot_de_passe') Mot de passe :
                   input(name='mot_de_passe', type='password' placeholder='Mot de passe')
                 li
@@ -73,13 +79,9 @@ block content
 
             //- BUTTON SUIVANT 
             .col-md-6.zone-button
-              a#click-suivant-demandeur.all-button(href="#") Suivant
+              a#click-suivant-demandeur.all-button Suivant
 
-      //-----------------------------------------------------//
-
-      //- BLOCK TEST DE COMPETENCES 
-      .col-md-12.block-test-competences
-
+        //- ETAPE 2 - TEST DE COMPETENCES 
         //- TITLE FORMULAIRE
         .col-md-offset-2.col-md-8.title-formulaire
           h3 Test De Compétences
@@ -95,7 +97,7 @@ block content
             P 3
 
           //- BEGIN CONTENT TEST DE COMPETENCES
-          .col-md-11.espace-formulaire
+          .col-md-11.espace-formulaire#form-demandeur
 
             //- CONTENT FORMULAIRE LEFT
             .col-md-6.content-form
@@ -139,15 +141,10 @@ block content
 
             //- BUTTON RETOUR
             .col-md-6.zone-button
-              a#click-retour-demandeur.all-button(href="#") Retour
+              a#click-retour-demandeur.all-button Retour
 
             //- BUTTON SUIVANT 
             .col-md-6.zone-button
               input(type="submit", value="Suivant", form="form-1")
-
-
-
-
-
 
 

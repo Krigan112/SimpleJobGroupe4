@@ -4,12 +4,13 @@ block content
   //- BEGIN FORMULAIRE 
   form(action='/espaceRecruteur', method="post", id="form-2")
 
-    //- FULL PAGE - 2 PARTIES - INFO PERSO - TEST COMPETENCE
-    .col-md-12.full-page-inscription-recruteur
+    //- CONTENT PAGE - VISIBLE 
+    .col-md-12.content-inscription#content-inscription-recruteur
 
-      //- BLOCK INFORMATIONS PERSONNELLES
-      .col-md-12.block-inscription-recruteur
+      //- CONTENT FORMULAIRE 
+      .col-md-12.content-formulaire
 
+        //- ETAPE 1 - INFORMATIONS PERSONNELLES 
         //- TITLE FORMULAIRE
         .col-md-offset-2.col-md-8.title-formulaire
           h3 Informations Personnelles
@@ -25,7 +26,7 @@ block content
             P 3
 
           //- BEGIN CONTENT FORMULAIRE 
-          .col-md-11.espace-formulaire-recruteur
+          .col-md-11.espace-formulaire#form-recruteur
 
             //- TITLE INFORMATIONS 
             .col-md-12.title-informations
@@ -92,7 +93,7 @@ block content
                     input(name='n_siret', type='text' placeholder='N° SIRET')          
                   li
                     label(for='type_entreprise') Fonction :
-                    input(name='', type='', placeholder='')
+                    input(name='', type='', placeholder='Fonction')
                   li
                     label(for='adresse') Téléphone :
                     input(name='adresse', type='text' placeholder='Adresse')
@@ -122,13 +123,9 @@ block content
 
             //- BUTTON SUIVANT 
             .col-md-6.zone-button
-              a#click-suivant-recruteur.all-button(href="#") Suivant
+              a#click-suivant-recruteur.all-button Suivant
 
-      //-----------------------------------------------------//
-
-      //- BLOCK TEST DE COMPETENCES 
-      .col-md-12.block-test-inscription-recruteur
-
+        //- ETAPE 2 - TEST RECRUTEUR 
         //- TITLE FORMULAIRE
         .col-md-offset-2.col-md-8.title-formulaire
           h3 Test De Compétences
@@ -144,7 +141,7 @@ block content
             P 3
 
           //- BEGIN CONTENT TEST DE COMPETENCES
-          .col-md-11.espace-formulaire-recruteur
+          .col-md-11.espace-formulaire#form-recruteur
 
             //- CONTENT FORMULAIRE LEFT
             .col-md-6.content-form
@@ -188,15 +185,8 @@ block content
 
             //- BUTTON RETOUR
             .col-md-6.zone-button
-              a#click-retour-recruteur.all-button(href="#") Retour
+              a#click-retour-recruteur.all-button Retour
 
             //- BUTTON SUIVANT 
             .col-md-6.zone-button
               input(type="submit", value="Suivant", form="form-2")
-
-
-
-
-
-
-
