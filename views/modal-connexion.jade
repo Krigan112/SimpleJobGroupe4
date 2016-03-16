@@ -1,0 +1,15 @@
+//- Modal POP UP CONNEXION 
+#myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+  .modal-dialog(role='document')
+    .modal-content.pop-up-connexion
+      form(action='#', method="post", id="#")
+        .modal-header.pop-up-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+          h4#myModalLabel.modal-title CONNEXION
+        .modal-body
+          input(name='identifiant', type='text', placeholder='Identfiant')
+          input(name='mot_de_passe', type='password', placeholder='Mot de passe')
+        .modal-footer.pop-up-footer
+          button.modal-button(type='button', data-dismiss='modal') ANNULER
+          input.modal-button(type='Submit', value='CONNEXION', form='#')
