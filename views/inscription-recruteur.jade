@@ -1,0 +1,192 @@
+extends layout 
+block content
+
+  //- BEGIN FORMULAIRE 
+  form(action='/espaceRecruteur', method="post", id="form-2")
+
+    //- CONTENT PAGE - VISIBLE 
+    .col-md-12.content-inscription#content-inscription-recruteur
+
+      //- CONTENT FORMULAIRE 
+      .col-md-12.content-formulaire
+
+        //- ETAPE 1 - INFORMATIONS PERSONNELLES 
+        //- TITLE FORMULAIRE
+        .col-md-offset-2.col-md-8.title-formulaire
+          h3 Informations Personnelles
+          p Veuillez à bien remplir tous les champs
+
+        //- CONTENT FULL
+        .col-md-12.content-full
+
+          //- ITEMS GUIDAGE USER
+          .col-md-1#item-guidage-recruteur.items-guidage-user
+            p#item-active 1
+            p 2 
+            P 3
+
+          //- BEGIN CONTENT FORMULAIRE 
+          .col-md-11.espace-formulaire#form-recruteur
+
+            //- TITLE INFORMATIONS 
+            .col-md-12.title-informations
+              h4 Informations Entreprise
+
+            //- CONTENT FORM INFORMATIONS ENTREPRISE 
+            .col-md-12.content-info-entreprise
+
+              //- CONTENT FORMULAIRE LEFT
+              .col-md-6.content-form
+                //- CHAMPS DU FORMULAIRE 
+                ul            
+                  li
+                    label(for='name_entreprise') Nom Entreprise :
+                    input(name='name_entreprise', type='text' placeholder='Nom Entreprise')          
+                  li
+                    label(for='n_siret') N° SIRET :
+                    input(name='n_siret', type='text' placeholder='N° SIRET')          
+                  li
+                    label(for='type_entreprise') Type Entreprise :
+                    select(name='type_entreprise')
+                      option(value='EI') EI
+                      option(value='EIRL') EIRL
+                      option(value='EURL') EURL
+                      option(value='SARL') SARL à associé unique
+                      option(value='SARL') SARL Classique
+                      option(value='SAS') SAS 
+                      option(value='SASU') SASU
+                      option(value='SA') SA 
+                      option(value='Auto-Entrepreneur') Auto-Entrepreneur
+
+              //- CONTENT FORMULAIRE RIGHT 
+              .col-md-6.content-form
+                //- CHAMPS FORMULAIRE
+                ul
+                  li
+                    label(for='adresse') Adresse :
+                    input(name='adresse', type='text' placeholder='Adresse')
+                  li
+                    label(for='ville') Ville :
+                    input(name='ville', type='text' placeholder='Ville')
+                  li
+                    label(for='code_postal') Code Postal :
+                    input(name='code_postal', type='text' placeholder='Code Postal')
+
+              //- END CONTENT FORM INFO ENTREPRISE
+
+            //- TITLE INFORMATIONS 
+            .col-md-12.title-informations
+              h4 Informations Recruteur
+
+            //- CONTENT FORM INFORMATIONS ENTREPRISE 
+            .col-md-12.content-info-recruteur
+
+              //- CONTENT FORMULAIRE LEFT
+              .col-md-6.content-form
+                //- CHAMPS DU FORMULAIRE 
+                ul            
+                  li
+                    label(for='name_entreprise') Nom :
+                    input(name='name_entreprise', type='text' placeholder='Nom Entreprise')          
+                  li
+                    label(for='n_siret') Prénom :
+                    input(name='n_siret', type='text' placeholder='N° SIRET')          
+                  li
+                    label(for='type_entreprise') Fonction :
+                    input(name='', type='', placeholder='Fonction')
+                  li
+                    label(for='adresse') Téléphone :
+                    input(name='adresse', type='text' placeholder='Adresse')
+
+              //- CONTENT FORMULAIRE RIGHT 
+              .col-md-6.content-form
+                //- CHAMPS FORMULAIRE
+                ul
+                  li
+                    label(for='ville') E-mail :
+                    input(name='ville', type='text' placeholder='Ville')
+                  li
+                    label(for='password') Mot de passe : 
+                    input(name='password', type='password', placeholder='Mot de passe')
+                  li
+                    label(for='password') Confirmation mot de passe : 
+                    input(name='password', type='password', placeholder='Mot de passe')
+                      
+              //- END CONTENT FORM INFO ENTREPRISE 
+
+          //- BUTTON END FORM 
+          .col-md-offset-3.col-md-6.button-end-form
+
+            //- BUTTON RETOUR
+            .col-md-6.zone-button
+              a.all-button(href="index.html") Retour
+
+            //- BUTTON SUIVANT 
+            .col-md-6.zone-button
+              a#click-suivant-recruteur.all-button Suivant
+
+        //- ETAPE 2 - TEST RECRUTEUR 
+        //- TITLE FORMULAIRE
+        .col-md-offset-2.col-md-8.title-formulaire
+          h3 Test De Compétences
+          p Veuillez à bien remplir tous les champs
+
+        //- CONTENT FULL
+        .col-md-12.content-full
+
+          //- ITEMS GUIDAGE USER
+          .col-md-1.items-guidage-user
+            p 1
+            p#item-active 2 
+            P 3
+
+          //- BEGIN CONTENT TEST DE COMPETENCES
+          .col-md-11.espace-formulaire#form-recruteur
+
+            //- CONTENT FORMULAIRE LEFT
+            .col-md-6.content-form
+              //- CHAMPS DU FORMULAIRE 
+              //-ul            
+                li
+                  label(for='name') Nom :
+                  input(name='name', type='text' placeholder='Nom')          
+                li
+                  label(for='prenom') Prénom :
+                  input(name='prenom', type='text' placeholder='Prénom')          
+                li
+                  label(for='Adresse') Adresse :
+                  input(name='Adresse', type='text' placeholder='Adresse')
+                li
+                  label(for='ville') Ville :
+                  input(name='ville', type='text' placeholder='Ville')
+                li
+                  label(for='code_postal') Code Postal :
+                  input(name='code_postal', type='text' placeholder='Code Postal')
+
+            //- CONTENT FORMULAIRE RIGHT 
+            .col-md-6.content-form
+              //- CHAMPS FORMULAIRE
+              //-ul
+                li
+                  label(for='telephone') Téléphone :
+                  input(name='telephone', type='tel' placeholder='Téléphone')
+                li
+                  label(for='email') E-mail :
+                  input(name='email', type='email' placeholder='E-mail')
+                li
+                  label(for='mot_de_passe') Mot de passe :
+                  input(name='mot_de_passe', type='password' placeholder='Mot de passe')
+                li
+                  label(for='mot_de_passe2') Confirmation mot de passe :
+                  input(name='mot_de_passe2', type='password' placeholder='Mot de passe')
+
+          //- BUTTON END FORM 
+          .col-md-offset-3.col-md-6.button-end-form
+
+            //- BUTTON RETOUR
+            .col-md-6.zone-button
+              a#click-retour-recruteur.all-button Retour
+
+            //- BUTTON SUIVANT 
+            .col-md-6.zone-button
+              input(type="submit", value="Suivant", form="form-2")
