@@ -10,6 +10,11 @@ block content
       //- CONTENT FORMULAIRE 
       .col-md-12.content-formulaire
 
+
+        //- ANCRE INFO PERSO 
+        .col-md-12#ancre-info-recruteur
+
+
         //- ETAPE 1 - INFORMATIONS PERSONNELLES 
         //- TITLE FORMULAIRE
         .col-md-offset-2.col-md-8.title-formulaire
@@ -123,7 +128,12 @@ block content
 
             //- BUTTON SUIVANT 
             .col-md-6.zone-button
-              a#click-suivant-recruteur.all-button Suivant
+              a.all-button(href="#ancre-test-recruteur") Suivant
+
+
+        //- ANCRE BUTTON SUIVANT 
+        .col-md-12#ancre-test-recruteur
+
 
         //- ETAPE 2 - TEST RECRUTEUR 
         //- TITLE FORMULAIRE
@@ -135,7 +145,7 @@ block content
         .col-md-12.content-full
 
           //- ITEMS GUIDAGE USER
-          .col-md-1.items-guidage-user
+          .col-md-1#item-guidage-recruteur.items-guidage-user
             p 1
             p#item-active 2 
             P 3
@@ -185,8 +195,8 @@ block content
 
             //- BUTTON RETOUR
             .col-md-6.zone-button
-              a#click-retour-recruteur.all-button Retour
+              a.all-button(href="#ancre-info-recruteur") Retour
 
             //- BUTTON SUIVANT 
             .col-md-6.zone-button
-              input(type="submit", value="Suivant", form="form-2")
+              input.all-button(type="submit", value="Suivant", form="form-2")
