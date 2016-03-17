@@ -4,11 +4,28 @@ header
   .col-md-12.navbar-head      
       //- CONTENT LOGO 
       .col-md-10.logo
-          a(href='index.html')
-              img.img-responsive(src='public/images/Logo.jpg', alt='Logo')
+          a(href='/')
+              img.img-responsive(src='public/images/logo-simple-job.svg', alt='Logo')
       //- CONTENT CONNEXION
       .col-md-2.connexion
           button(type='button', data-toggle='modal', data-target='#myModal')
             | Connexion
+
+
+  //- Modal POP UP CONNEXION 
+  #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+    .modal-dialog(role='document')
+      .modal-content.pop-up-connexion
+        form(action='#', method="post", id="#")
+          .modal-header.pop-up-header
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true') ×
+            h4#myModalLabel.modal-title Connexion
+          .modal-body
+            input(name='identifiant', type='text', placeholder='Identfiant')
+            input(name='mot_de_passe', type='password', placeholder='Mot De Passe')
+          .modal-footer.pop-up-footer
+            button.btn.btn-default(type='button', data-dismiss='modal') Annuler
+            input.btn.btn-primary(type='Submit', value='Connexion', form='#')
 
 //- ENDING NAVBAR
